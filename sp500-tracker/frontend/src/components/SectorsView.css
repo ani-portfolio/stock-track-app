@@ -1,0 +1,84 @@
+.sectors-view {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 0.75rem;
+}
+
+.sv-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.sv-pie-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 0.5rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: border-color 0.15s;
+}
+
+.sv-pie-card:hover {
+  border-color: var(--accent);
+}
+
+.sv-pie-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-left: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Rich hover tooltip */
+.sv-tooltip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  min-width: 190px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.sv-tt-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.15rem;
+}
+
+.sv-tt-sub {
+  font-size: 0.73rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.65rem;
+}
+
+.sv-tt-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.18rem 0.9rem;
+}
+
+.sv-tt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.sv-tt-label {
+  font-size: 0.73rem;
+  color: var(--text-secondary);
+}
+
+.sv-tt-val {
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+
+.c-pos { color: var(--text-pos); }
+.c-neg { color: var(--text-neg); }

@@ -1,0 +1,191 @@
+:root {
+  --bg: #0d0f18;
+  --surface: #141720;
+  --surface-hover: #1d2133;
+  --border: #252836;
+  --text-primary: #e4e6f0;
+  --text-secondary: #8b91a8;
+  --accent: #4f9cf9;
+  --positive: #34c77b;
+  --negative: #f0534a;
+  --text-pos: #4ade80;
+  --text-neg: #f87171;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font);
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 2rem;
+  /* Make full-page layout with sticky table */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ── Header ── */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.app-tabs {
+  display: flex;
+  gap: 0.2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+
+.app-tab {
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.3rem 1rem;
+  transition: color 0.15s, background 0.15s;
+}
+
+.app-tab:hover { color: var(--text-primary); }
+
+.app-tab.active {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.app-header h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.header-updated {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.badge-refreshing {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+}
+
+.btn-refresh {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.82rem;
+  padding: 0.4rem 0.85rem;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.btn-refresh:hover:not(:disabled) {
+  color: var(--text-primary);
+  border-color: var(--accent);
+}
+
+.btn-refresh:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ── Loading / empty states ── */
+.state-loading,
+.state-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.state-sub {
+  font-size: 0.82rem;
+  opacity: 0.7;
+}
+
+/* ── Spinners ── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.spinner-lg {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+}
+
+/* ── Shared pill button (used by PeriodSelector, EarningsView, MAG7View) ── */
+.pill-btn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.pill-btn:hover { color: var(--text-primary); }
+.pill-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }

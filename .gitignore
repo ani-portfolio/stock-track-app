@@ -1,0 +1,14 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Node
+sp500-tracker/frontend/node_modules/
+sp500-tracker/frontend/dist/
+
+# Env overrides (keep .env.example, ignore actual values)
+.env.local
+.env.*.local

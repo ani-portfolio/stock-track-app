@@ -1,0 +1,117 @@
+.earnings-view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding-top: 1rem;
+}
+
+.ev-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-shrink: 0;
+}
+
+.ev-title {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.ev-window-btns {
+  display: flex;
+  gap: 0.3rem;
+}
+
+
+.ev-count {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.ev-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* ── Table ── */
+.ev-table-wrap {
+  flex: 1;
+  overflow-y: auto;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.ev-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.ev-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.ev-table thead th {
+  background: #12151f;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+}
+
+.ev-table tbody tr {
+  border-bottom: 1px solid rgba(42, 45, 58, 0.6);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.ev-table tbody tr:hover { background: var(--surface-hover); }
+
+.ev-table td { padding: 0.5rem 0.85rem; font-variant-numeric: tabular-nums; }
+
+.ev-date {
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  min-width: 110px;
+}
+
+.ev-days {
+  font-weight: 700;
+  font-size: 0.82rem;
+  min-width: 40px;
+  display: inline-block;
+}
+
+.ev-ticker {
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+}
+
+.ev-name {
+  max-width: 240px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--text-primary);
+}
+
+.ev-sector {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}

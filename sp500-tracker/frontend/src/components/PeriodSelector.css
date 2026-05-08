@@ -1,0 +1,9 @@
+.period-selector {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.period-btn {
+  font-weight: 500;
+}

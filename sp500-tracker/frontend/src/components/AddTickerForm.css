@@ -1,0 +1,43 @@
+.add-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 380px;
+}
+
+.add-input {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.9rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.add-input:focus {
+  border-color: var(--accent);
+}
+
+.add-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.add-btn {
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  transition: opacity 0.15s;
+}
+
+.add-btn:hover {
+  opacity: 0.85;
+}

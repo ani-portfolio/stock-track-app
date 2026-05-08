@@ -1,7 +1,20 @@
 {
   "permissions": {
     "allow": [
-      "Bash(grep -v '\\\\.py$')"
+      "Bash(grep -v '\\\\.py$')",
+      "Bash(npm --version)",
+      "Bash(python3 -c \"import yfinance as yf; t = yf.Ticker\\('AAPL'\\); info = t.fast_info; print\\(type\\(info\\)\\); print\\(dir\\(info\\)\\)\")",
+      "Bash(python3 *)",
+      "Bash(npm list *)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(pkill -f \"uvicorn main:app\")",
+      "Bash(pkill -f \"vite\")",
+      "Bash(xargs kill *)",
+      "Read(//tmp/**)",
+      "Bash(curl -s http://localhost:8000/sp500)",
+      "Bash(curl -s http://localhost:5173/src/components/SectorsView.jsx)"
     ]
   }
 }
