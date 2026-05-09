@@ -82,7 +82,8 @@ function CenterLabel({ viewBox, avg, label }) {
 
 function OutsideLabel({ cx, cy, midAngle, outerRadius, payload, athMode }) {
   const RADIAN = Math.PI / 180
-  const r = outerRadius + 40
+  const offset = window.innerWidth < 640 ? 20 : 40
+  const r = outerRadius + offset
   const x = cx + r * Math.cos(-midAngle * RADIAN)
   const y = cy + r * Math.sin(-midAngle * RADIAN)
   const anchor = x > cx ? 'start' : 'end'

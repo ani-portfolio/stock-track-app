@@ -2,6 +2,18 @@
   margin-top: 1.25rem;
 }
 
+@media (max-width: 640px) {
+  .filter-bar-wrap {
+    margin-top: 0.75rem;
+  }
+  .filter-search {
+    min-width: 120px;
+  }
+  .screener-panel {
+    gap: 0.5rem 0.75rem;
+  }
+}
+
 .filter-bar {
   display: flex;
   flex-wrap: wrap;

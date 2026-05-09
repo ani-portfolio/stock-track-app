@@ -45,6 +45,7 @@
 .ev-table-wrap {
   flex: 1;
   overflow-y: auto;
+  overflow-x: auto;
   border: 1px solid var(--border);
   border-radius: 12px;
 }

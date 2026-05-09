@@ -31,9 +31,18 @@
   border-radius: 12px;
   border: 1px solid var(--border);
   margin-top: 1rem;
-  /* Fixed height with sticky header for large lists */
   max-height: calc(100vh - 220px);
   overflow-y: auto;
+}
+
+@media (max-width: 640px) {
+  .table-wrap {
+    max-height: calc(100vh - 180px);
+    margin-top: 0.5rem;
+  }
+  .col-group-bar {
+    gap: 0.25rem;
+  }
 }
 
 .stock-table {

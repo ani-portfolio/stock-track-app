@@ -4,7 +4,6 @@ import { fetchSP500, triggerSP500Refresh } from './api'
 import FilterBar from './components/FilterBar'
 import StockTable from './components/StockTable'
 import SectorsView from './components/SectorsView'
-import BubbleView from './components/BubbleView'
 import MAG7View from './components/MAG7View'
 import EarningsView from './components/EarningsView'
 import ChartModal from './components/ChartModal'
@@ -30,7 +29,7 @@ export default function App() {
   const [lastUpdated, setLastUpdated] = useState(null)
   const [refreshing, setRefreshing] = useState(false)
   const [initialLoad, setInitialLoad] = useState(true)
-  const [activeTab, setActiveTab] = useState('discover')
+  const [activeTab, setActiveTab] = useState('stocks')
 
   const [watchlist, setWatchlist] = useLocalStorage('watchlist', [])
   const [selectedTicker, setSelectedTicker] = useState(null)
@@ -149,7 +148,6 @@ export default function App() {
           <h1>S&amp;P 500 Tracker</h1>
           {dataReady && (
             <nav className="app-tabs">
-              <button className={`app-tab ${activeTab === 'discover'  ? 'active' : ''}`} onClick={() => setActiveTab('discover')}>Discover</button>
               <button className={`app-tab ${activeTab === 'stocks'    ? 'active' : ''}`} onClick={() => setActiveTab('stocks')}>Stocks</button>
               <button className={`app-tab ${activeTab === 'earnings'  ? 'active' : ''}`} onClick={() => setActiveTab('earnings')}>Earnings</button>
               <button className={`app-tab ${activeTab === 'sectors'   ? 'active' : ''}`} onClick={() => setActiveTab('sectors')}>Sectors</button>
@@ -194,8 +192,6 @@ export default function App() {
           <p>No data available.</p>
           <button className="btn-refresh" onClick={handleManualRefresh}>Fetch Data</button>
         </div>
-      ) : activeTab === 'discover' ? (
-        <BubbleView stocks={sp500} onTickerClick={setSelectedTicker} />
       ) : activeTab === 'stocks' ? (
         <>
           <FilterBar

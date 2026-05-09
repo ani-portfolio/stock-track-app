@@ -14,7 +14,14 @@
       "Bash(xargs kill *)",
       "Read(//tmp/**)",
       "Bash(curl -s http://localhost:8000/sp500)",
-      "Bash(curl -s http://localhost:5173/src/components/SectorsView.jsx)"
+      "Bash(curl -s http://localhost:5173/src/components/SectorsView.jsx)",
+      "Bash(vercel --version)",
+      "Bash(vercel whoami *)",
+      "Bash(vercel --yes --name sp500-tracker --build-env VITE_API_URL=https://sp500-tracker-api.onrender.com)",
+      "Bash(vercel env *)",
+      "Bash(vercel --prod --yes)",
+      "mcp__claude_ai_Excalidraw__read_me",
+      "mcp__claude_ai_Google_Drive__read_file_content"
     ]
   }
 }

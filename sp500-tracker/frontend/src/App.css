@@ -189,3 +189,44 @@ body {
 }
 .pill-btn:hover { color: var(--text-primary); }
 .pill-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+/* ── Mobile ── */
+@media (max-width: 640px) {
+  .app {
+    padding: 0.75rem 0.75rem 1.5rem;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .header-left {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .app-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .app-tabs {
+    order: 1;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .app-tabs::-webkit-scrollbar { display: none; }
+
+  .header-right {
+    display: none;
+  }
+}
